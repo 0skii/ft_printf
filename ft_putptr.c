@@ -6,7 +6,7 @@
 /*   By: ozerbib- <ozerbib-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 01:42:07 by ozerbib-          #+#    #+#             */
-/*   Updated: 2023/01/25 16:20:03 by ozerbib-         ###   ########.fr       */
+/*   Updated: 2023/01/25 16:29:32 by ozerbib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	ft_ptr(unsigned long nbr)
 
 int	ft_putptr(unsigned long n)
 {
-	if (!n)
+	if (!n || n == 0)
 		return (0);
 	return (ft_putstr("0x") + ft_ptr(n));
 }
