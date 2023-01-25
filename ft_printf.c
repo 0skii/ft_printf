@@ -6,7 +6,7 @@
 /*   By: ozerbib- <ozerbib-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 01:59:33 by ozerbib-          #+#    #+#             */
-/*   Updated: 2022/12/14 02:15:14 by ozerbib-         ###   ########.fr       */
+/*   Updated: 2023/01/25 12:14:13 by ozerbib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,16 @@ static int	ft_flag(char c, va_list *args)
 		return (ft_putchar(va_arg(*args, int)));
 	else if (c == 's')
 		return (ft_putstr(va_arg(*args, char *)));
+	else if (c == 'p')
+		return (ft_putptr(va_arg(*args, unsigned long)));
 	else if (c == 'u')
 		return (ft_putuint(va_arg(*args, unsigned int)));
+	else if (c == 'd' || c == 'i')
+		return (ft_putnbr_base(va_arg(*args, int), 10));
+	else if (c == 'x')
+		return (ft_putlu(va_arg(*args, unsigned int), 16, 'l'));
+	else if (c == 'X')
+		return (ft_putlu(va_arg(*args, unsigned int), 16, 'U'));
 	else if (c == '%')
 		return (ft_putchar('%'));
 	return (0);

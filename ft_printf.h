@@ -6,7 +6,7 @@
 /*   By: ozerbib- <ozerbib-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 14:35:29 by ozerbib-          #+#    #+#             */
-/*   Updated: 2022/12/14 02:05:52 by ozerbib-         ###   ########.fr       */
+/*   Updated: 2023/01/25 13:12:37 by ozerbib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,8 @@ int		ft_printf(const char *str, ...);
 int		ft_putchar(char c);
 int		ft_putstr(char *c);
 int		ft_putuint(unsigned int nbr);
+int		ft_putptr(unsigned long n);
+int		ft_putnbr_base(long n, int base);
+int		ft_putlu(unsigned int nbr, unsigned int base, char c);
 
 #endif

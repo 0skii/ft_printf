@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putuint.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ozerbib- <ozerbib-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/07 14:58:37 by ozerbib-          #+#    #+#             */
-/*   Updated: 2023/01/25 11:10:22 by ozerbib-         ###   ########.fr       */
+/*   Created: 2023/01/25 11:18:25 by ozerbib-          #+#    #+#             */
+/*   Updated: 2023/01/25 11:35:08 by ozerbib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putuint(unsigned int nbr)
+int	ft_putnbr_base(long n, int base)
 {
 	int	x;
 
 	x = 0;
-	if (nbr > 9)
+	if (n < 0)
 	{
-		x += ft_putuint(nbr / 10);
-		x += ft_putuint(nbr % 10);
+		x += ft_putchar('-') + ft_putnbr_base(-n, base);
 	}
-	else if (nbr < 10)
+	else if (n > (base - 1))
 	{
-		nbr = nbr + 48;
-		x += ft_putchar(nbr);
+		x += ft_putnbr_base(n / base, base) + ft_putnbr_base(n % base, base);
+	}
+	else if (n < 10)
+	{
+		n = n + 48;
+		x += ft_putchar(n);
 	}
 	else
 	{
-		nbr = nbr + 87;
-		x += ft_putchar(nbr);
+		n = n + 55;
+		x += ft_putchar(n);
 	}
 	return (x);
 }
