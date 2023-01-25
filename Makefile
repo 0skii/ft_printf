@@ -6,7 +6,7 @@
 #    By: ozerbib- <ozerbib-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/25 14:50:55 by ozerbib-          #+#    #+#              #
-#    Updated: 2023/01/25 14:50:57 by ozerbib-         ###   ########.fr        #
+#    Updated: 2023/01/25 14:53:11 by ozerbib-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@ SRCS = ft_printf.c ft_putchar.c ft_putptr.c ft_putstr.c \
 		ft_putuint.c ft_putnbr_base.c ft_putlu.c
 
 OBJS = $(SRCS:.c=.o)
-INC = ft_printf.h
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 NORM = norminette -R
