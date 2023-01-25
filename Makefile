@@ -6,11 +6,12 @@
 #    By: ozerbib- <ozerbib-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/25 14:50:55 by ozerbib-          #+#    #+#              #
-#    Updated: 2023/01/25 15:04:00 by ozerbib-         ###   ########.fr        #
+#    Updated: 2023/01/25 15:06:25 by ozerbib-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
+
 SRCS = ft_printf.c ft_putchar.c ft_putptr.c ft_putstr.c \
 		ft_putuint.c ft_putnbr_base.c ft_putlu.c
 

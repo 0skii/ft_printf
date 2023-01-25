@@ -6,7 +6,7 @@
 /*   By: ozerbib- <ozerbib-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 01:42:07 by ozerbib-          #+#    #+#             */
-/*   Updated: 2023/01/25 15:23:54 by ozerbib-         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:52:10 by ozerbib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ static int	ft_ptr(unsigned long nbr)
 	}
 	else if (nbr < 10)
 	{
-		nbr += 48;
+		nbr = nbr + 48;
 		x += ft_putchar(nbr);
 	}
 	else
 	{
-		nbr += 87;
+		nbr = nbr + 87;
 		x += ft_putchar(nbr);
 	}
 	return (x);
