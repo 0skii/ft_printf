@@ -6,7 +6,7 @@
 /*   By: ozerbib- <ozerbib-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 01:59:33 by ozerbib-          #+#    #+#             */
-/*   Updated: 2023/01/25 15:43:23 by ozerbib-         ###   ########.fr       */
+/*   Updated: 2023/01/26 14:53:31 by ozerbib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,3 +56,4 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (n_args);
 }
+
